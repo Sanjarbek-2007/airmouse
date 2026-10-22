@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">AirCursor</string>
+    <string name="accessibility_description">Lets AirCursor draw its cursor over other apps, tap, drag and scroll for you, and use Back / Home when you make the matching hand gesture. It never reads your screen content. Press Volume Up and Volume Down together at any time to pause it.</string>
+</resources>

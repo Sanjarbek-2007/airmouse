@@ -1,0 +1,25 @@
+# Python / desktop
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+*.egg-info/
+desktop/models/*.task
+desktop/vendor/lib/*.so*
+desktop/build/
+desktop/dist/
+
+# Node / mobile
+node_modules/
+mobile/android/app/src/main/assets/hand_landmarker.task
+mobile/android/local.properties
+mobile/android/.gradle/
+mobile/android/build/
+mobile/android/app/build/
+mobile/android/app/.cxx/
+
+# Editors / OS
+.idea/
+.vscode/
+.DS_Store
+*.swp

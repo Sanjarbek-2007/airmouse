@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aircursor"
+version = "1.0.0"
+description = "Control your computer's cursor with hand gestures seen by any camera"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.9,<3.13"   # MediaPipe publishes wheels for these Python versions
+dependencies = [
+  "mediapipe>=0.10",
+  "PySide6>=6.6",
+  "numpy>=1.24",
+  "opencv-python-headless>=4.8",
+  "pynput>=1.7; sys_platform != 'linux'",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+aircursor = "aircursor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["aircursor*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

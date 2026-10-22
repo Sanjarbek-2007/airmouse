@@ -1,0 +1,26 @@
+name: Bug report
+description: Something doesn't work as expected
+labels: [bug]
+body:
+  - type: dropdown
+    id: app
+    attributes: { label: Which app?, options: [Desktop (Linux), Desktop (Windows), Desktop (macOS), Android] }
+    validations: { required: true }
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened?
+      description: What did you do, what did you expect, what happened instead? A screenshot or short clip helps a lot.
+    validations: { required: true }
+  - type: input
+    id: version
+    attributes: { label: AirCursor version, placeholder: "1.0.0 (see Settings or `aircursor --version`)" }
+  - type: input
+    id: system
+    attributes: { label: OS / phone model, placeholder: "Ubuntu 24.04 GNOME Wayland  /  Redmi Note 10, Android 12 (MIUI)" }
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Desktop - run from a terminal and paste the output. Android - `adb logcat -d | grep -i aircursor`.
+      render: shell
